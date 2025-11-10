@@ -13,9 +13,8 @@ public class ControlManager : MonoBehaviour
 
     // 우클릭으로 가해지는 힘의 크기를 조절하는 계수
     [SerializeField] private float throwForce = 500f;
-    
-    // Raycast 검사를 위한 LayerMask (선택 사항)
-    [SerializeField] private LayerMask draggableLayer;
+
+    [SerializeField] private string tagName;
 
     // 캐싱된 메인 카메라
     private Camera mainCamera;
@@ -63,12 +62,14 @@ public class ControlManager : MonoBehaviour
     private void TrySelectRigidbody()
     {
         Vector2 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        
+
         // LayerMask를 사용한 2D Raycast: 특정 레이어의 객체만 검출 (성능 및 정확도 향상)
-        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero, 0.1f, draggableLayer);
+        RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero, 0.1f);
 
         if (hit.collider != null)
         {
+            if (hit.transform.tag != tagName) return;
+
             selectedRigidbody = hit.collider.GetComponent<Rigidbody2D>();
             
             if (selectedRigidbody != null)

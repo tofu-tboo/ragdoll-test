@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1791637867117109662}
   - component: {fileID: 2292616060298751446}
   - component: {fileID: 663089044257306833}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: LegRU
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &2292616060298751446
@@ -139,7 +139,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -120
     m_UpperAngle: 60
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 4823737798561059087}
   - component: {fileID: 1869676131298489457}
   - component: {fileID: 6625924733303611944}
-  m_Layer: 11
+  m_Layer: 7
   m_Name: Torso
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -294,7 +294,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &1869676131298489457
@@ -319,7 +319,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -45
     m_UpperAngle: 45
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 2419716560025858137}
   - component: {fileID: 9105630684584660198}
   - component: {fileID: 2932835501324119706}
-  m_Layer: 14
+  m_Layer: 7
   m_Name: Head
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -489,7 +489,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &2419716560025858137
@@ -514,7 +514,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -75
     m_UpperAngle: 75
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 3258064104078536905}
   - component: {fileID: 1911325070402853592}
   - component: {fileID: 6623714383456850462}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: Pelvis
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -681,7 +681,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &1911325070402853592
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 3048541933759930841}
   - component: {fileID: 8660507387382539108}
   - component: {fileID: 126341934815578330}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: ArmRU
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -870,7 +870,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &8660507387382539108
@@ -895,7 +895,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -120
     m_UpperAngle: 120
@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 2077817862089900915}
   - component: {fileID: 4748411254294330563}
   - component: {fileID: 1759371110227922385}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Num
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '2
+  m_text: '3
 
 '
   m_isRightToLeft: 0
@@ -1084,8 +1084,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4351997242493200967}
   - component: {fileID: 2012564708025149846}
-  m_Layer: 9
-  m_Name: Ragdollv2
+  - component: {fileID: 7948099333889129919}
+  m_Layer: 7
+  m_Name: Ragdollv3
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1144,6 +1145,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7948099333889129919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7546542151160922570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 482ca8d1ee2576b4b8144c59bfe13768, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7827370961543047721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1170,7 @@ GameObject:
   - component: {fileID: 4380971749255022921}
   - component: {fileID: 3838928359420232223}
   - component: {fileID: 273725330024112845}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: LegRD
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -1295,7 +1308,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &273725330024112845
@@ -1320,7 +1333,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -150
     m_UpperAngle: 150
@@ -1336,7 +1349,7 @@ GameObject:
   - component: {fileID: 5760994658285899411}
   - component: {fileID: 5505287141915489456}
   - component: {fileID: 1625963810674681967}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1439,7 +1452,7 @@ GameObject:
   - component: {fileID: 6336137487020766981}
   - component: {fileID: 8138385497071134649}
   - component: {fileID: 3642343030028565115}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: LegLD
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -1577,7 +1590,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &3642343030028565115
@@ -1602,7 +1615,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -150
     m_UpperAngle: 150
@@ -1619,7 +1632,7 @@ GameObject:
   - component: {fileID: 2367533005194964116}
   - component: {fileID: 6620287269446295871}
   - component: {fileID: 7463676967437828802}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: ArmRD
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -1720,7 +1733,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &6620287269446295871
@@ -1745,7 +1758,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -150
     m_UpperAngle: 150
@@ -1799,7 +1812,7 @@ GameObject:
   - component: {fileID: 2989934001590050275}
   - component: {fileID: 44707207161026053}
   - component: {fileID: 798978133143372517}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: ArmLD
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -1900,7 +1913,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &44707207161026053
@@ -1925,7 +1938,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -150
     m_UpperAngle: 150
@@ -1979,7 +1992,7 @@ GameObject:
   - component: {fileID: 2940973130631343586}
   - component: {fileID: 2837497568264864278}
   - component: {fileID: 357564741924748988}
-  m_Layer: 13
+  m_Layer: 7
   m_Name: LegLU
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -2080,7 +2093,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &2837497568264864278
@@ -2105,7 +2118,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -60
     m_UpperAngle: 120
@@ -2159,7 +2172,7 @@ GameObject:
   - component: {fileID: 3852640507116351386}
   - component: {fileID: 5535277589782213762}
   - component: {fileID: 576390364599062305}
-  m_Layer: 12
+  m_Layer: 7
   m_Name: ArmLU
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
@@ -2260,7 +2273,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!233 &5535277589782213762
@@ -2285,7 +2298,7 @@ HingeJoint2D:
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 1
+  m_UseLimits: 0
   m_AngleLimits:
     m_LowerAngle: -120
     m_UpperAngle: 120

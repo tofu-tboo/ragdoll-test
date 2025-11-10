@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Ragdoll
   layers:
   - Default
   - TransparentFX
@@ -14,12 +15,12 @@ TagManager:
   - Ground
   - Ragdoll
   - Part
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ragdoll2
+  - PPelvis
+  - PTorso
+  - PArm
+  - PLeg
+  - PHead
   - 
   - 
   - 
