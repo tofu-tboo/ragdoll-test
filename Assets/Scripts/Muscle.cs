@@ -106,13 +106,17 @@ public class Muscle : MonoBehaviour
 
     void FixedUpdate()
     {
+        
+
+        float normalizedRotation = Mathf.Repeat(rb.rotation + 180f, 360f) - 180f;
+        // rb.SetRotation(normalizedRotation);
+        rb.rotation = normalizedRotation;
+
+        Debug.Log(rb.name + ": " + rb.rotation);
         if (!musclesActive)
         {
             return;
         }
-
-        float normalizedRotation = Mathf.Repeat(rb.rotation + 180f, 360f) - 180f;
-        rb.SetRotation(normalizedRotation);
         ApplyTorqueToMaintainPose();
     }
 
@@ -123,14 +127,10 @@ public class Muscle : MonoBehaviour
         // 1. 각도 오차 계산
         float currentAngle = rb.rotation;
         
-        // 💡 현재 각도(currentAngle)에서 가장 가까운 360도 배수 각도를 계산합니다.
-        // Mathf.Round(currentAngle / 360f)는 현재 각도가 몇 바퀴 회전했는지에 대한 가장 가까운 정수(회전 횟수)를 구합니다.
-        float rotations = Mathf.Round(currentAngle / 360f);
-        float closest360Angle = rotations * 360f;
+    
         
         // 동적으로 계산된 closest360Angle을 목표 각도로 사용하여 오차를 계산합니다.
-        // 기존의 targetAngle 필드는 무시됩니다.
-        float angleError = Mathf.DeltaAngle(currentAngle, closest360Angle);
+        float angleError = Mathf.DeltaAngle(currentAngle, targetAngle);
 
         float proportionalVelocity = angleError * pGain * pBase;
         
