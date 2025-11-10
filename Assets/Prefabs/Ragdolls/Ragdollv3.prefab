@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1791637867117109662}
   - component: {fileID: 2292616060298751446}
   - component: {fileID: 663089044257306833}
+  - component: {fileID: 7674176318384147390}
   m_Layer: 7
   m_Name: LegRU
   m_TagString: Ragdoll
@@ -101,12 +102,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.15957521
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -180,6 +181,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.4}
   m_Direction: 0
+--- !u!114 &7674176318384147390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551798472144740281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 1784845373237520503}
+  leverageFactor: 0.45
+  baseTorqueFactorK: 1
+  targetAngle: 10
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.76
+  dampingFactor: 0.9
 --- !u!1 &5027512037938226374
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +216,7 @@ GameObject:
   - component: {fileID: 4823737798561059087}
   - component: {fileID: 1869676131298489457}
   - component: {fileID: 6625924733303611944}
+  - component: {fileID: 5881048954962372055}
   m_Layer: 7
   m_Name: Torso
   m_TagString: Ragdoll
@@ -281,12 +305,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.343
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -369,6 +393,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &5881048954962372055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5027512037938226374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 4258199196496588639}
+  - {fileID: 495349254378455252}
+  - {fileID: 6558201131400411217}
+  leverageFactor: 0.7
+  baseTorqueFactorK: 1
+  targetAngle: 0
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 1
+  dampingFactor: 0.05
 --- !u!1 &5130173455962013968
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +431,7 @@ GameObject:
   - component: {fileID: 2419716560025858137}
   - component: {fileID: 9105630684584660198}
   - component: {fileID: 2932835501324119706}
+  - component: {fileID: 6558201131400411217}
   m_Layer: 7
   m_Name: Head
   m_TagString: Ragdoll
@@ -476,12 +525,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.3216991
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -567,6 +616,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!114 &6558201131400411217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130173455962013968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts: []
+  leverageFactor: 0.8
+  baseTorqueFactorK: 1
+  targetAngle: 0
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.2
+  dampingFactor: 0.05
 --- !u!1 &5373614924656589322
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +650,7 @@ GameObject:
   - component: {fileID: 3258064104078536905}
   - component: {fileID: 1911325070402853592}
   - component: {fileID: 6623714383456850462}
+  - component: {fileID: 1784845373237520503}
   m_Layer: 7
   m_Name: Pelvis
   m_TagString: Ragdoll
@@ -668,12 +739,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.23520002
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -756,6 +827,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
+--- !u!114 &1784845373237520503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5373614924656589322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 5881048954962372055}
+  leverageFactor: 0.6
+  baseTorqueFactorK: 1
+  targetAngle: 0
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.9
+  dampingFactor: 0.05
 --- !u!1 &6050621663484284033
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +862,7 @@ GameObject:
   - component: {fileID: 3048541933759930841}
   - component: {fileID: 8660507387382539108}
   - component: {fileID: 126341934815578330}
+  - component: {fileID: 495349254378455252}
   m_Layer: 7
   m_Name: ArmRU
   m_TagString: Ragdoll
@@ -857,12 +951,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.10813606
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -936,6 +1030,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.4}
   m_Direction: 0
+--- !u!114 &495349254378455252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050621663484284033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 4743775163442430894}
+  leverageFactor: 0.4
+  baseTorqueFactorK: 1
+  targetAngle: 10
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.4
+  dampingFactor: 0.9
 --- !u!1 &7049016713617906596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,12 +1245,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 11
+  m_UseAutoMass: 1
+  m_Mass: 1
   m_LinearDamping: 0
-  m_AngularDamping: 0.05
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1157,6 +1273,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 482ca8d1ee2576b4b8144c59bfe13768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lastBases:
+  - {fileID: 6664213152280416144}
+  - {fileID: 6554728365873901347}
+  pBase: 380
 --- !u!1 &7827370961543047721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1290,7 @@ GameObject:
   - component: {fileID: 4380971749255022921}
   - component: {fileID: 3838928359420232223}
   - component: {fileID: 273725330024112845}
+  - component: {fileID: 6554728365873901347}
   m_Layer: 7
   m_Name: LegRD
   m_TagString: Ragdoll
@@ -1295,12 +1416,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.124318525
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1337,6 +1458,28 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -150
     m_UpperAngle: 150
+--- !u!114 &6554728365873901347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827370961543047721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 7674176318384147390}
+  leverageFactor: 0.4
+  baseTorqueFactorK: 1
+  targetAngle: 0
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.6
+  dampingFactor: 0.9
 --- !u!1 &7972017080557327583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1595,7 @@ GameObject:
   - component: {fileID: 6336137487020766981}
   - component: {fileID: 8138385497071134649}
   - component: {fileID: 3642343030028565115}
+  - component: {fileID: 6664213152280416144}
   m_Layer: 7
   m_Name: LegLD
   m_TagString: Ragdoll
@@ -1577,12 +1721,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.124318525
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1619,6 +1763,28 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -150
     m_UpperAngle: 150
+--- !u!114 &6664213152280416144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980208762427063626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 5649044023429400244}
+  leverageFactor: 0.4
+  baseTorqueFactorK: 1
+  targetAngle: 0
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.6
+  dampingFactor: 0.9
 --- !u!1 &8619774603047812124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,6 +1798,7 @@ GameObject:
   - component: {fileID: 2367533005194964116}
   - component: {fileID: 6620287269446295871}
   - component: {fileID: 7463676967437828802}
+  - component: {fileID: 4743775163442430894}
   m_Layer: 7
   m_Name: ArmRD
   m_TagString: Ragdoll
@@ -1720,12 +1887,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.09053985
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1799,6 +1966,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.4}
   m_Direction: 0
+--- !u!114 &4743775163442430894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619774603047812124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts: []
+  leverageFactor: 0.36
+  baseTorqueFactorK: 1
+  targetAngle: 0
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.3
+  dampingFactor: 0.9
 --- !u!1 &8812895445575869337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +2000,7 @@ GameObject:
   - component: {fileID: 2989934001590050275}
   - component: {fileID: 44707207161026053}
   - component: {fileID: 798978133143372517}
+  - component: {fileID: 4635667336515215139}
   m_Layer: 7
   m_Name: ArmLD
   m_TagString: Ragdoll
@@ -1900,12 +2089,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.09053986
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1979,6 +2168,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.4}
   m_Direction: 0
+--- !u!114 &4635667336515215139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812895445575869337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts: []
+  leverageFactor: 0.36
+  baseTorqueFactorK: 1
+  targetAngle: 0
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.3
+  dampingFactor: 0.9
 --- !u!1 &9115245859252103161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1992,6 +2202,7 @@ GameObject:
   - component: {fileID: 2940973130631343586}
   - component: {fileID: 2837497568264864278}
   - component: {fileID: 357564741924748988}
+  - component: {fileID: 5649044023429400244}
   m_Layer: 7
   m_Name: LegLU
   m_TagString: Ragdoll
@@ -2080,12 +2291,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.15957521
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2159,6 +2370,28 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.4}
   m_Direction: 0
+--- !u!114 &5649044023429400244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115245859252103161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 1784845373237520503}
+  leverageFactor: 0.45
+  baseTorqueFactorK: 1
+  targetAngle: -10
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.76
+  dampingFactor: 0.9
 --- !u!1 &9157469665560251531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,6 +2405,7 @@ GameObject:
   - component: {fileID: 3852640507116351386}
   - component: {fileID: 5535277589782213762}
   - component: {fileID: 576390364599062305}
+  - component: {fileID: 4258199196496588639}
   m_Layer: 7
   m_Name: ArmLU
   m_TagString: Ragdoll
@@ -2260,12 +2494,12 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.9
-  m_AngularDamping: 0.5
+  m_UseAutoMass: 1
+  m_Mass: 0.10813609
+  m_LinearDamping: 0
+  m_AngularDamping: 0.9
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ebd900432640a9043826a6bcccada072, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2339,3 +2573,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.7, y: 1.4}
   m_Direction: 0
+--- !u!114 &4258199196496588639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157469665560251531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153a7754710531f458830704beac2fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  externalMuscleStrength: 0
+  carriedParts:
+  - {fileID: 4635667336515215139}
+  leverageFactor: 0.4
+  baseTorqueFactorK: 1
+  targetAngle: -10
+  loadInfluenceFactor: 1
+  musclesActive: 1
+  pGain: 0.4
+  dampingFactor: 0.9

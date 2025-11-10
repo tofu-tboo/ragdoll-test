@@ -30,7 +30,6 @@ public class PileManager : MonoBehaviour
         Vector3 centerPosition = transform.position - new Vector3(spawnAreaSize.x, spawnAreaSize.y) * 0.5f;
 
         // 그리드 소환을 위한 변수
-        Vector3 currentOffsetPosition = centerPosition;
         int cols = Mathf.CeilToInt(Mathf.Sqrt(pileCount)); // 대략적인 열 수 계산
         int currentRow = 0;
         int currentCol = 0;
