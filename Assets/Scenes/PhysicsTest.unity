@@ -410,6 +410,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -0.711111
       objectReference: {fileID: 0}
+    - target: {fileID: 495349254378455252, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784845373237520503, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1869676131298489457, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 0.31666654
@@ -429,6 +437,10 @@ PrefabInstance:
     - target: {fileID: 3642343030028565115, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: -0.711111
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258199196496588639, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4351997242493200967, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -470,6 +482,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4635667336515215139, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4743775163442430894, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5535277589782213762, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_ConnectedAnchor.x
       value: -0.4199996
@@ -477,6 +497,22 @@ PrefabInstance:
     - target: {fileID: 5535277589782213762, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_ConnectedAnchor.y
       value: 0.35714287
+      objectReference: {fileID: 0}
+    - target: {fileID: 5649044023429400244, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881048954962372055, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554728365873901347, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6558201131400411217, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6620287269446295871, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -486,9 +522,17 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -0.6200014
       objectReference: {fileID: 0}
+    - target: {fileID: 6664213152280416144, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7546542151160922570, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_Name
       value: Ragdollv3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674176318384147390, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
+      propertyPath: musclesActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8660507387382539108, guid: aff5018061a214f4a9b5c136bb16264f, type: 3}
       propertyPath: m_ConnectedAnchor.x
