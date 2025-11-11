@@ -11,6 +11,7 @@ public class Muscle : MonoBehaviour
     [Header("Load Calculation")]
     [Tooltip("이 Rigidbody가 직접적으로 짐을 지탱하는 하위 파츠들의 Muscle 컴포넌트 목록.")]
     [SerializeField] private Muscle[] carriedParts; // Muscle 컴포넌트를 참조하여 하위 부담 Mass를 가져옴
+    private Rigidbody2D anchorPart;
     
     [Tooltip("관절의 지렛대 효과 계수 (e.g., Leg Down=1.4, Torso=1.0).")]
     [SerializeField] private float leverageFactor = 1.0f;
@@ -51,6 +52,7 @@ public class Muscle : MonoBehaviour
             enabled = false;
             return;
         }
+        anchorPart = GetComponent<HingeJoint2D>().connectedBody;
     }
     
     /// <summary>
@@ -106,11 +108,30 @@ public class Muscle : MonoBehaviour
 
     void FixedUpdate()
     {
-        
-
-        float normalizedRotation = Mathf.Repeat(rb.rotation + 180f, 360f) - 180f;
+        // float normalizedRotation = Mathf.Repeat(rb.rotation, 360f);
         // rb.SetRotation(normalizedRotation);
-        rb.rotation = normalizedRotation;
+        // rb.rotation = normalizedRotation;
+    //    float currentRelativeAngle;
+
+    //     if (anchorPart != null)
+    //     {
+    //         // 1. 상대 각도 계산
+    //         currentRelativeAngle = Mathf.DeltaAngle(anchorPart.rotation, rb.rotation);
+            
+    //         // 2. 강제 정규화 (rb.rotation에 덮어쓰기)
+    //         // Hinge Joint Limit의 상대 각도와 일치하는 방식으로 Rigidbody의 월드 회전을 강제 수정합니다.
+    //         // anchorPart의 회전이 0이라고 가정할 때의 누적 없는 회전값이 됩니다.
+    //         rb.rotation = currentRelativeAngle; 
+    //     }
+    //     else
+    //     {
+    //         // 최상위 파츠 (월드 회전 기준)
+    //         currentRelativeAngle = Mathf.Repeat(rb.rotation, 360f);
+            
+    //         // 2. 강제 정규화 (rb.rotation에 덮어쓰기)
+    //         // 월드 회전을 -180 ~ 180으로 강제 리셋
+    //         rb.rotation = currentRelativeAngle;
+    //     }
 
         Debug.Log(rb.name + ": " + rb.rotation);
         if (!musclesActive)
@@ -124,13 +145,23 @@ public class Muscle : MonoBehaviour
     {
         if (!loadCalculated) return;
 
-        // 1. 각도 오차 계산
-        float currentAngle = rb.rotation;
-        
-    
-        
-        // 동적으로 계산된 closest360Angle을 목표 각도로 사용하여 오차를 계산합니다.
-        float angleError = Mathf.DeltaAngle(currentAngle, targetAngle);
+        // 1. 각도 오차 계산 및 상대 각도 계산
+        float currentRelativeAngle;
+
+        if (anchorPart != null)
+        {
+            // 💡 상대 각도 계산: Hinge Joint Limit처럼 앵커 파트에 대한 상대 각도를 얻습니다.
+            // 이 값은 이미 -180 ~ 180 범위에 해당합니다.
+            currentRelativeAngle = Mathf.DeltaAngle(anchorPart.rotation, rb.rotation);
+        }
+        else
+        {
+            // 최상위 파츠 (앵커 없음): 월드 각도를 정규화하여 사용
+            currentRelativeAngle = Mathf.Repeat(rb.rotation + 180f, 360f) - 180f;
+        }
+
+        // 오차는 (현재 상대 각도)와 (Inspector에 설정된 상대 목표 각도)의 차이입니다.
+        float angleError = Mathf.DeltaAngle(currentRelativeAngle, targetAngle);
 
         float proportionalVelocity = angleError * pGain * pBase;
         

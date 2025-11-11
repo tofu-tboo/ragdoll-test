@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2292616060298751446}
   - component: {fileID: 663089044257306833}
   - component: {fileID: 7674176318384147390}
+  - component: {fileID: 5900926895912315546}
   m_Layer: 7
   m_Name: LegRU
   m_TagString: Ragdoll
@@ -203,6 +204,26 @@ MonoBehaviour:
   musclesActive: 1
   pGain: 0.76
   dampingFactor: 0.9
+--- !u!114 &5900926895912315546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551798472144740281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -120
+  upperAngle: 60
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &5027512037938226374
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,6 +238,7 @@ GameObject:
   - component: {fileID: 1869676131298489457}
   - component: {fileID: 6625924733303611944}
   - component: {fileID: 5881048954962372055}
+  - component: {fileID: 53171466164065639}
   m_Layer: 7
   m_Name: Torso
   m_TagString: Ragdoll
@@ -417,6 +439,26 @@ MonoBehaviour:
   musclesActive: 1
   pGain: 1
   dampingFactor: 0.05
+--- !u!114 &53171466164065639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5027512037938226374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -15
+  upperAngle: 15
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &5130173455962013968
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,6 +474,7 @@ GameObject:
   - component: {fileID: 9105630684584660198}
   - component: {fileID: 2932835501324119706}
   - component: {fileID: 6558201131400411217}
+  - component: {fileID: 3221199552556463281}
   m_Layer: 7
   m_Name: Head
   m_TagString: Ragdoll
@@ -637,6 +680,26 @@ MonoBehaviour:
   musclesActive: 1
   pGain: 0.2
   dampingFactor: 0.05
+--- !u!114 &3221199552556463281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5130173455962013968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -90
+  upperAngle: 90
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &5373614924656589322
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +926,7 @@ GameObject:
   - component: {fileID: 8660507387382539108}
   - component: {fileID: 126341934815578330}
   - component: {fileID: 495349254378455252}
+  - component: {fileID: 7020622986889023141}
   m_Layer: 7
   m_Name: ArmRU
   m_TagString: Ragdoll
@@ -1052,6 +1116,26 @@ MonoBehaviour:
   musclesActive: 1
   pGain: 5
   dampingFactor: 0.9
+--- !u!114 &7020622986889023141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6050621663484284033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -120
+  upperAngle: 120
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &7049016713617906596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '3
+  m_text: '5
 
 '
   m_isRightToLeft: 0
@@ -1203,7 +1287,7 @@ GameObject:
   - component: {fileID: 7948099333889129919}
   - component: {fileID: 1665000697373898852}
   m_Layer: 7
-  m_Name: Ragdollv3
+  m_Name: Ragdollv5
   m_TagString: Ragdoll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1277,7 +1361,8 @@ MonoBehaviour:
   lastBases:
   - {fileID: 6664213152280416144}
   - {fileID: 6554728365873901347}
-  pBase: 380
+  pBase: 300
+  initialActive: 0
 --- !u!114 &1665000697373898852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,6 +1389,7 @@ GameObject:
   - component: {fileID: 3838928359420232223}
   - component: {fileID: 273725330024112845}
   - component: {fileID: 6554728365873901347}
+  - component: {fileID: 1528522884176641392}
   m_Layer: 7
   m_Name: LegRD
   m_TagString: Ragdoll
@@ -1488,11 +1574,31 @@ MonoBehaviour:
   - {fileID: 7674176318384147390}
   leverageFactor: 0.4
   baseTorqueFactorK: 1
-  targetAngle: 0
+  targetAngle: -10
   loadInfluenceFactor: 1
   musclesActive: 1
   pGain: 0.6
   dampingFactor: 0.9
+--- !u!114 &1528522884176641392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827370961543047721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -150
+  upperAngle: 150
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &7972017080557327583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1715,7 @@ GameObject:
   - component: {fileID: 8138385497071134649}
   - component: {fileID: 3642343030028565115}
   - component: {fileID: 6664213152280416144}
+  - component: {fileID: 4241276235827398565}
   m_Layer: 7
   m_Name: LegLD
   m_TagString: Ragdoll
@@ -1793,11 +1900,31 @@ MonoBehaviour:
   - {fileID: 5649044023429400244}
   leverageFactor: 0.4
   baseTorqueFactorK: 1
-  targetAngle: 0
+  targetAngle: 10
   loadInfluenceFactor: 1
   musclesActive: 1
   pGain: 0.6
   dampingFactor: 0.9
+--- !u!114 &4241276235827398565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7980208762427063626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -150
+  upperAngle: 150
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &8619774603047812124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1939,7 @@ GameObject:
   - component: {fileID: 6620287269446295871}
   - component: {fileID: 7463676967437828802}
   - component: {fileID: 4743775163442430894}
+  - component: {fileID: 7008951051622986291}
   m_Layer: 7
   m_Name: ArmRD
   m_TagString: Ragdoll
@@ -1995,11 +2123,31 @@ MonoBehaviour:
   carriedParts: []
   leverageFactor: 0.36
   baseTorqueFactorK: 1
-  targetAngle: 0
+  targetAngle: -10
   loadInfluenceFactor: 1
   musclesActive: 1
   pGain: 5
   dampingFactor: 0.9
+--- !u!114 &7008951051622986291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8619774603047812124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -150
+  upperAngle: 150
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &8812895445575869337
 GameObject:
   m_ObjectHideFlags: 0
@@ -2014,6 +2162,7 @@ GameObject:
   - component: {fileID: 44707207161026053}
   - component: {fileID: 798978133143372517}
   - component: {fileID: 4635667336515215139}
+  - component: {fileID: 5296539566677865447}
   m_Layer: 7
   m_Name: ArmLD
   m_TagString: Ragdoll
@@ -2197,11 +2346,31 @@ MonoBehaviour:
   carriedParts: []
   leverageFactor: 0.36
   baseTorqueFactorK: 1
-  targetAngle: 0
+  targetAngle: 10
   loadInfluenceFactor: 1
   musclesActive: 1
   pGain: 5
   dampingFactor: 0.9
+--- !u!114 &5296539566677865447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8812895445575869337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -150
+  upperAngle: 150
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &9115245859252103161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2216,6 +2385,7 @@ GameObject:
   - component: {fileID: 2837497568264864278}
   - component: {fileID: 357564741924748988}
   - component: {fileID: 5649044023429400244}
+  - component: {fileID: 8170628048492252843}
   m_Layer: 7
   m_Name: LegLU
   m_TagString: Ragdoll
@@ -2405,6 +2575,26 @@ MonoBehaviour:
   musclesActive: 1
   pGain: 0.76
   dampingFactor: 0.9
+--- !u!114 &8170628048492252843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9115245859252103161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -60
+  upperAngle: 120
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1
 --- !u!1 &9157469665560251531
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2609,7 @@ GameObject:
   - component: {fileID: 5535277589782213762}
   - component: {fileID: 576390364599062305}
   - component: {fileID: 4258199196496588639}
+  - component: {fileID: 2096119407410334927}
   m_Layer: 7
   m_Name: ArmLU
   m_TagString: Ragdoll
@@ -2608,3 +2799,23 @@ MonoBehaviour:
   musclesActive: 1
   pGain: 5
   dampingFactor: 0.9
+--- !u!114 &2096119407410334927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9157469665560251531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 083980823d024b8baeab55cd41bba63d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hinge: {fileID: 0}
+  connectedBodyOverride: {fileID: 0}
+  useLimits: 0
+  lowerAngle: -120
+  upperAngle: 120
+  hardClamp: 1
+  rewindSpeed: 360
+  zeroOutAngularVelocity: 1

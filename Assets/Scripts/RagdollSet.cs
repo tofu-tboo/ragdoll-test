@@ -4,7 +4,8 @@ using System.Linq;
 public class RagdollSet : MonoBehaviour
 {
     [SerializeField] private Muscle[] lastBases;
-    [SerializeField] private float pBase = 30.0f; 
+    [SerializeField] private float pBase = 30.0f;
+    [SerializeField] private bool initialActive = false;
 
     void Awake()
     {
@@ -26,6 +27,8 @@ public class RagdollSet : MonoBehaviour
             // 계산 순서는 '자식 -> 부모'가 되도록 보장합니다.
             TraverseAndCalculateLoad(keyBase, finishCalcPool);
         }
+
+        GetComponent<Ragdoll>().UpdateModeToggle(initialActive);
 
         Destroy(this);
     }
